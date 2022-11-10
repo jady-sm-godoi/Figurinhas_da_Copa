@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body *{
+    font-family: 'Roboto', sans-serif;
+
+}
+
+body{
+    background: linear-gradient(150deg, #0F2B05, #000);
+    height: 100vh;
+    text-align: center;
+}
+
+header{
+    padding: 75px;
+}
+
+.card{
+    display: inline-block;
+    width: 304px;
+    height: 456px;
+    background: url("./assets/bg-blue.svg");
+    cursor: pointer;
+
+    opacity: 0;
+    transform: translateY(-100px);
+    animation: appear 0.5s forwards;
+}
+
+.web{
+    color: #f7dd43;
+    margin-top: 60px;
+    padding-left: 105px;
+}
+
+.skillsRow{
+    width: 270px;
+    padding-top: 45px;
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.iSkills{
+    width: 20px;
+    height: 20px;
+}
+
+.perfil{
+    margin-top: 50px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #f7dd43;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.info {
+    margin-top: 20px;
+    margin-left: 35px;
+    text-align: left;
+    color: white;
+}
+
+.info h1{
+    font-size: 18px;
+    line-height: 140%;
+}
+
+.info p{
+    font-size: 14px;
+    line-height: 160%;
+}
+
+@keyframes appear {
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
