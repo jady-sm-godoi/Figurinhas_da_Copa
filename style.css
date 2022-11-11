@@ -18,31 +18,42 @@ body{
 header{
     padding: 75px;
 }
-
 .card{
     display: inline-block;
     width: 304px;
-    height: 456px;
+    height: 508px;
     background: url("./assets/bg-blue.svg");
     cursor: pointer;
-
+    
     opacity: 0;
     transform: translateY(-100px);
     animation: appear 0.5s forwards;
 }
-
-.web{
-    color: #f7dd43;
-    margin-top: 60px;
-    padding-left: 105px;
+.content{
+    margin-top: 15px;
+    display: inline-block;
+    /* background-color: rgba(255, 0, 0, 0.229); */
+    width: 266px;
+    height: 424px;
 }
+
+.cabecalho{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 12px 20px;
+}
+#fifalogo{
+    width: 35px;
+    height: auto;
+}
+
 
 .skillsRow{
     width: 270px;
-    padding-top: 45px;
     display: flex;
     gap: 12px;
     justify-content: flex-end;
+    align-items: flex-end;
 }
 
 .iSkills{
@@ -51,7 +62,7 @@ header{
 }
 
 .perfil{
-    margin-top: 50px;
+    margin-top: 34px;
     width: 150px;
     height: 150px;
     object-fit: cover;
@@ -63,9 +74,25 @@ header{
     user-select: none;
 }
 
+.nacional{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin: 60px 20px 0 0;
+}
+
+.nacional p{
+    color: #f7dd43;
+}
+
+.nacional img{
+    width: 25px;
+}
+
 .info {
     margin-top: 20px;
-    margin-left: 35px;
+    margin-left: 20px;
     text-align: left;
     color: white;
 }

@@ -1,3 +1,30 @@
+/**
+ * um array com as skills -> para colocar as opções no formulário
+ * no formulario o campo só pode aceitar no máximo 5 skills na seleção
+ * um array com as skills selecionadas - no máximo 5
+ * pegar a row onde os iskills serão inseridos
+ * for cada skill in selecaoskills
+ * na row insere o elemento com ${skill}
+ * transforma isso em uma função
+ * 
+ */
+const skills = ['python', 'django', 'dart', 'github', 'html', 'css', 'js', 'react-js', 'flutter']
+const selecaoSkills = ['github', 'html', 'css', 'js', 'react-js']
+
+function addSkillsIcons(skillsArray){
+    const row = document.querySelector('.skillsRow')
+    skillsArray.forEach((e)=>{
+        let img = document.createElement('img')
+        img.classList.add('iSkills')
+        img.setAttribute('src', `./assets/${e}-icon.png`)
+        row.append(img)
+    })
+}
+
+addSkillsIcons(selecaoSkills)
+
+
+
 let isBlue = true
 
 function changeCard(event){
@@ -15,9 +42,6 @@ function changeCard(event){
     row.children[1].src = `./assets/${skill1}-icon.png`
     row.children[2].src = `./assets/${skill2}-icon.png`
     row.children[3].src = `./assets/${skill3}-icon.png`
-    
-    const web = document.querySelector('.web')
-    web.innerHTML = isBlue ? 'back-end' : 'front-end'
 
     isBlue = !isBlue
 }
