@@ -37,10 +37,40 @@ header{
     height: 424px;
 }
 
+.profileForm{
+    width: 230px;
+    margin: 0 auto;
+}
+
+.inputs{
+    border: none;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.334)!important;
+}
+.inputs::placeholder {
+    color: white;
+}
+
+.selecao{
+    display: flex;
+    height: 130px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.skillSelection{
+    text-align: left;
+    color:white;
+    margin: 0 !important;
+
+}
+
 .cabecalho{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: 12px 20px;
+    width: 226px;
 }
 #fifalogo{
     width: 35px;
@@ -76,14 +106,14 @@ header{
 
 .nacional{
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     gap: 12px;
-    margin: 60px 20px 0 0;
+    margin: 60px 20px 0px 143px;
 }
 
-.nacional p{
+.nacional h3{
     color: #f7dd43;
+    font-size: .8rem;
 }
 
 .nacional img{
