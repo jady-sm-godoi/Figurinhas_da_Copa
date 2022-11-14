@@ -1,8 +1,52 @@
+let skills = []
 
-let isBlue = true
-const skills = ['python', 'django', 'dart', 'github', 'html', 'css', 'js', 'react-js', 'flutter']
-const selecaoSkills = ['github', 'html', 'css', 'js', 'react-js', 'django','flutter']
+function createCard(){
+    const nome = document.getElementById('nome')
+    const username = document.getElementById('username')
+    const profissao = document.getElementById('profissao')
+    const foto = document.getElementById('formFileSm')
 
+    let profileName = document.getElementById("profileName")
+    profileName.innerText = nome.value
+
+    let socialName = document.getElementById("socialname")
+    socialName.innerText = username.value
+
+    let profileJob = document.getElementById("profileJob")
+    profileJob.innerText = profissao.value
+
+    let photo = document.querySelector(".perfil")
+    photo.src = URL.createObjectURL(foto.files[0])
+
+
+    //options for skills - constructor
+    const htmlOption = document.getElementById('html')
+    const cssOption = document.getElementById('css')
+    const javascriptOption = document.getElementById('javascript')
+    const reactOption = document.getElementById('react')
+    const githubOption = document.getElementById('github')
+    const dartOption = document.getElementById('dart')
+    const flutterOption = document.getElementById('flutter')
+    const pythonOption = document.getElementById('python')
+    const djangoOption = document.getElementById('django')
+    const vueOption = document.getElementById('vue')
+    
+    const options = [htmlOption, cssOption, javascriptOption, reactOption, githubOption, dartOption, flutterOption, pythonOption, djangoOption, vueOption]
+    
+    options.forEach(
+        (opt) => {
+            if(opt.checked){
+                skills.push(opt.value)
+            }
+        }
+    )
+    
+    changeSkillsIcons(skills)
+}
+
+
+
+let isBlue = true;
 function changeCard(event){
     const card = event.currentTarget;
     const bgColor = isBlue ? 'green' : 'blue'
@@ -11,25 +55,27 @@ function changeCard(event){
     isBlue = !isBlue
     const row = document.querySelector('.skillsRow')
     row.innerHTML = ''
-    changeSkillsIcons(selecaoSkills)
+    changeSkillsIcons(skills)
 
 }
 
 function addSkillsIcons(skillsArray){
     const row = document.querySelector('.skillsRow')
+    row.innerHTML = ''
     skillsArray.forEach((e)=>{
-        let img = document.createElement('img')
-        img.classList.add('iSkills')
-        img.setAttribute('src', `./assets/${e}-icon.png`)
-        row.append(img)
-    })
+            let img = document.createElement('img')
+            img.classList.add('iSkills')
+            img.setAttribute('src', `./assets/${e}-icon.png`)
+            row.append(img)
+        }
+    )
 }
 
 function changeSkillsIcons(skillsArray){
     if(skillsArray.length <= 5){
         addSkillsIcons(skillsArray)
     }else if(skillsArray.length > 5){
-        const skillsArrayBlue = skillsArray.slice(0,4)
+        const skillsArrayBlue = skillsArray.slice(0,5)
         const skillsArrayGreen = skillsArray.slice(5)
         if(isBlue){
             addSkillsIcons(skillsArrayBlue)
@@ -40,12 +86,11 @@ function changeSkillsIcons(skillsArray){
     }
 }
 
-changeSkillsIcons(selecaoSkills)
+const cardDois = document.getElementById('card2')
+const form = document.getElementById('cardform')
+form.addEventListener('submit', e => {
+    e.preventDefault()
+    createCard()
+    cardDois.style.display = 'none'
+})
 
-
-/**
- * funcao: pega os valores dos inputs do formulario e constroi um objeto
- * colocar essa função no onclick do botão Salvar no formulário
- * atribuir valores aos campos no card de acordo com os itens do objeto criado
- * consertar os bugs 
- */
