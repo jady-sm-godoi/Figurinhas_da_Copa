@@ -10,7 +10,7 @@ function createCard(){
     profileName.innerText = nome.value
 
     let socialName = document.getElementById("socialname")
-    socialName.innerText = username.value
+    socialName.innerText = '@'+username.value
 
     let profileJob = document.getElementById("profileJob")
     profileJob.innerText = profissao.value
