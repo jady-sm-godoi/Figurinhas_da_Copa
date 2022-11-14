@@ -23,12 +23,12 @@ Evento exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnologia
 
 
 <p align="center">
-  <img alt="calendario da copa" src="https://user-images.githubusercontent.com/59850893/201752261-6cd677b5-70d5-4ff1-822d-4dbc16992fe4.png" width="50%">
+  <img alt="calendario da copa" src="https://user-images.githubusercontent.com/59850893/201756263-462ef3fa-2499-46ba-8d92-75b40fe6a866.png" width="50%">
 </p>
 
 
 <p align="center">
-  <img alt="calendario da copa" src="https://user-images.githubusercontent.com/59850893/201752300-2a37b674-3544-44a3-a9a0-0a41a46bd34f.png" width="50%">
+  <img alt="calendario da copa" src="https://user-images.githubusercontent.com/59850893/201756293-a8f8bd31-5860-41c5-8f98-1af6010197f6.png" width="50%">
 </p>
 
 ## 🚀 Tecnologias
